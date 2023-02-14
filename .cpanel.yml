@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - php StaticPHP-Launcher.php
+    - export DEPLOYPATH=~/sites/knowledgebase/
+    - /bin/rm -R $DEPLOYPATH/public/*
+    - /bin/cp -R public $DEPLOYPATH
